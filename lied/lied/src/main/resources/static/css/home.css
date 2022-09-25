@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap');
+@import url('https://webfontworld.github.io/SCoreDream/SCoreDream.css');
+
+body {
+    position: relative;
+    width: 428px;
+    height: 926px;
+
+    background: #9775FA;
+    border-radius: 50px;
+}
+
+
+/*메인 화면 꾸미기*/
+#c1 {
+    position: absolute;
+    width: 282px;
+    height: 282px;
+    left: 251px;
+    top: 6px;
+
+    background: linear-gradient(218.23deg, rgba(255, 255, 255, 0) 2.23%, #37C7AA 59.79%);
+    border-radius: 100%;
+}
+
+#c2 {
+    position: absolute;
+    width: 282px;
+    height: 282px;
+    left: -120px;
+    top: 211px;
+
+    background: linear-gradient(180deg, #F4C10C 0%, rgba(236, 185, 3, 0) 0.01%, rgba(244, 193, 11, 0.916667) 55.73%);
+    border-radius: 100%;
+}
+
+#sub-title {
+    position: absolute;
+    width: 305px;
+    height: 84px;
+    left: 62px;
+    top: 208px;
+
+    font-family: 'S-Core Dream';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+    /* or 131% */
+
+
+    color: #F8F9FA;
+}
+
+#main-title {
+    position: absolute;
+    width: 298px;
+    height: 90px;
+    left: 62px;
+    top: 292px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 93.4%;
+    /* identical to box height, or 90px */
+
+    text-transform: uppercase;
+
+    color: #F8F9FA;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/*메뉴 설정*/
+#menu-wrapper {
+    position: absolute;
+    width: 328px;
+    height: 288px;
+    left: 50px;
+    top: 552px;
+
+    background: #FFFFFF;
+    border-radius: 11.0561px;
+}
+
+#menu-title {
+    position: absolute;
+    width: 122px;
+    height: 42px;
+    left: 23px;
+    top: 18px;
+
+    font-family: 'S-Core Dream';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 42px;
+    /* identical to box height, or 210% */
+
+    color: #212529;
+}
+
+/* 바로가기 메뉴 설정 */
+#direct-wrapper {
+    position: absolute;
+    width: 273.58px;
+    height: 68px;
+    left: 27px;
+    top: 79px;
+    cursor: pointer;
+}
+
+#direct-img {
+    position: absolute;
+    left: 0%;
+    right: 90.49%;
+    top: 25%;
+    bottom: 22.43%;
+
+    background-image: url("../images/icon-direct.png");
+    background-size: cover;
+}
+
+#direct-btn {
+    position: absolute;
+    width: 16.58px;
+    height: 16.58px;
+    left: 257px;
+    top: 27px;
+
+    background-image: url("../images/icon-arrow-right.png");
+    background-size: cover;
+}
+
+#direct-title {
+    position: absolute;
+    width: 97px;
+    height: 42px;
+    left: 59px;
+    top: 0px;
+
+    font-family: 'S-Core Dream';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 42px;
+    /* identical to box height, or 262% */
+
+    color: #212529;
+}
+
+#direct-sub {
+    position: absolute;
+    width: 182px;
+    height: 42px;
+    left: 59px;
+    top: 26px;
+
+    font-family: 'S-Core Dream';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 42px;
+    /* identical to box height, or 323% */
+
+
+    color: #ADB5BD;
+}
+
+#line {
+    position: absolute;
+    width: 269px;
+    height: 0px;
+    left: 30px;
+    top: 165px;
+
+    border: 0.691007px solid #E8E8E8;
+}
+
+/* 질문지 보러가기 메뉴 설정 */
+#list-wrapper {
+    cursor: pointer;
+    position: absolute;
+    width: 279.58px;
+    height: 68px;
+    left: 24px;
+    top: 184px;
+}
+
+#list-img {
+    position: absolute;
+    width: 41px;
+    height: 41px;
+    left: 0px;
+    top: 14px;
+
+    background-image: url("../images/icon-list.png");
+    background-size: cover;
+}
+
+#list-title {
+    position: absolute;
+    width: 113px;
+    height: 42px;
+    left: 65px;
+    top: 0px;
+
+    font-family: 'S-Core Dream';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 42px;
+    /* identical to box height, or 262% */
+
+
+    color: #212529;
+}
+
+#list-sub {
+    position: absolute;
+    width: 198px;
+    height: 42px;
+    left: 65px;
+    top: 26px;
+
+    font-family: 'S-Core Dream';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 42px;
+    /* identical to box height, or 323% */
+
+
+    color: #ADB5BD;
+}
+
+#list-btn {
+    position: absolute;
+    width: 16.58px;
+    height: 16.58px;
+    left: 263px;
+    top: 26px;
+
+    background-image: url("../images/icon-arrow-right.png");
+    background-size: cover;
+}

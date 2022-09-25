@@ -1,0 +1,182 @@
+body{
+    position: relative;
+    width: 428px;
+    height: 926px;
+
+    background: linear-gradient(182.48deg, #865EFF 26.32%, #FBFBFB 169.92%);
+    border-radius: 50px;
+}
+
+/* 헤더 설정 */
+#header-wrapper{
+    position: absolute;
+    width: 428px;
+    height: 88px;
+    left: 0px;
+    top: 0px;
+
+    background: #F8F9FA;
+}
+
+#back-btn{
+    cursor: pointer;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    left: 46px;
+    top: 36px;
+
+    background-image: url("../images/icon-back.png");
+    background-size: cover;
+}
+#title{
+    position: absolute;
+    width: 128px;
+    height: 42px;
+    left: 150px;
+    top: 34px;
+
+    font-family: 'S-Core Dream';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 42px;
+    /* identical to box height, or 175% */
+
+
+    color: #212529;
+
+}
+
+/* 질문지 공지 설정 */
+#noti-wrapepr{
+    position: absolute;
+    width: 320px;
+    height: 106px;
+    left: 54px;
+    top: 120px;
+
+    background: #F0F0F0;
+    border-radius: 11.0561px;
+}
+
+#noti-img{
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    left: 13px;
+    top: 16px;
+
+    background-image: url("../images/icon-message.png");
+    background-size: cover;
+}
+
+#noti-title{
+    position: absolute;
+    width: 44px;
+    height: 42px;
+    left: 39px;
+    top: 7px;
+
+    font-family: 'S-Core Dream';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 42px;
+    /* identical to box height, or 280% */
+
+
+    color: #7048E4;
+}
+
+#noti-sub{
+    position: absolute;
+    width: 161px;
+    height: 40px;
+    left: 39px;
+    top: 49px;
+
+    font-family: 'S-Core Dream';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+
+
+    color: #212529;
+}
+
+#line{
+    position: absolute;
+    width: 428px;
+    height: 0px;
+    left: 1px;
+    top: 252px;
+
+    opacity: 0.3;
+    border:1px dashed #D3CDCD;
+}
+
+/* 리스트 그리기 */
+#list1-wrapper{
+    position: absolute;
+    width: 292px;
+    height: 98px;
+    left: 68px;
+    top: 270px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+#list1-title{
+    position: absolute;
+    width: 27px;
+    height: 42px;
+    left: 25px;
+    top: 11px;
+
+    font-family: 'S-Core Dream';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 42px;
+    /* identical to box height, or 300% */
+
+    display: flex;
+    align-items: center;
+
+    color: #8F949B;
+}
+
+#list1-sub{
+    position: absolute;
+    width: 196px;
+    height: 42px;
+    left: 25px;
+    top: 44px;
+
+    font-family: 'S-Core Dream';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 42px;
+    /* identical to box height, or 300% */
+
+    display: flex;
+    align-items: center;
+
+    color: #212529;
+}
+
+#list1-btn{
+    position: absolute;
+    width: 17px;
+    height: 20px;
+    left: 255px;
+    top: 44px;
+
+    background-image: url("../images/icon-arrow-right.png");
+    background-size: cover;
+}
