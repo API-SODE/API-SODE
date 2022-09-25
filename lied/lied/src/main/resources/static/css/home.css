@@ -246,3 +246,34 @@ body {
     background-image: url("../images/icon-arrow-right.png");
     background-size: cover;
 }
+
+/* 푸터 설정 */
+#logo{
+    position: absolute;
+    width: 34px;
+    height: 23px;
+    left: 244px;
+    top: 872px;
+
+    background-image: url("../images/logo2.png");
+    background-size: cover;
+}
+
+#team-name{
+    position: absolute;
+    width: 92px;
+    height: 10px;
+    left: 285px;
+    top: 879px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 93.4%;
+    /* or 10px */
+
+    text-transform: uppercase;
+
+    color: #DEE2E6;
+}
