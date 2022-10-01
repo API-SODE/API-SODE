@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/measurement.css}">
+    <meta charset="UTF-8">
+    <title>LieD</title>
+</head>
+<body>
+<div id="header-wrapper">
+    <div id="back-btn" onclick="history.back(-1)"></div>
+    <div id="title">측정하기</div>
+</div>
+
+<div id="question-wrapper">
+    <div id="question-img"></div>
+    <div id="question-title">질문</div>
+    <div id="question-sub">선택된 질문</div>
+</div>
+
+<div id="camera-wrapper">
+	<div id="camera">Camera</div>
+</div>
+
+<div id="loding-wrapper">
+	<div id="loding-img1"></div>
+	<div id="loding-img2"></div>
+	<div id="loding-img3"></div>
+	<div id="loding-img4"></div>
+	<div id="loding-img5"></div>
+	<div id="loding-img6"></div>
+	<div id="loding-img7"></div>
+	<div id="loding-img8"></div>
+	<div id="loding-text">찌릿찌릿 측정 중입니다.</div>
+</div>
+
+<div id="warning-wrapper">
+	<div id="warning-img"></div>
+	<div id="warning-title">WARNING</div>
+	<hr class="warning-hr">
+	<div id="warning-sub">카메라를 30초간 응시하며 답변에 대답해주세요.<br>사용자의 홍채 정보로 BPM, 맥박 정보를 측정합니다.<br>실제 거짓말 탐지기가 아닌 재미를 위한 도구입니다.</div>
+</div>
+</body>
+</html>

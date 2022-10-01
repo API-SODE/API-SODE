@@ -1,0 +1,315 @@
+body {
+    position: relative;
+	width: 428px;
+	height: 926px;
+	
+	background: #FAFAFA;
+	border-radius: 50px;
+}
+
+/* 헤더 설정 */
+#header-wrapper{
+    position: absolute;
+    width: 428px;
+    height: 88px;
+    left: 0px;
+    top: 0px;
+
+    background: #F8F9FA;
+}
+
+#back-btn{
+    cursor: pointer;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    left: 46px;
+    top: 36px;
+
+    background-image: url("../images/icon-back.png");
+    background-size: cover;
+}
+
+#title{
+	position: absolute;
+	width: 93px;
+	height: 42px;
+	left: 178px;
+	top: 33px;
+	
+	font-family: 'S-Core Dream';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 23px;
+	line-height: 42px;
+	/* identical to box height, or 175% */
+	
+	
+	color: #212529;
+	
+}
+
+/* 질문 설정 */
+#question-wrapper{
+	position: absolute;
+	width: 320px;
+	height: 88px;
+	left: 54px;
+	top: 104px;
+	
+	background: #F0F0F0;
+	border-radius: 11.0561px;
+}
+#question-img{
+	position: absolute;
+	left: 4.66%;
+	right: 89.35%;
+	top: 21.45%;
+	bottom: 57.86%;
+	
+	background-image: url("../images/icon-message.png");
+    background-size: cover;}
+#question-title{
+	position: absolute;
+	width: 29px;
+	height: 42px;
+	left: 39px;
+	top: 7px;
+	
+	font-family: 'S-Core Dream';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 42px;
+	/* identical to box height, or 280% */
+	
+	
+	color: #7048E4;
+}
+#question-sub{
+	position: absolute;
+	width: 243px;
+	height: 42px;
+	left: 39px;
+	top: 37px;
+	
+	font-family: 'S-Core Dream';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 42px;
+	/* identical to box height, or 262% */
+	
+	
+	color: #212529;
+}
+
+/* 카메라 설정 */
+#camera-wrapper{
+	position: absolute;
+	width: 341px;
+	height: 295px;
+	left: 44px;
+	top: 224px;
+	
+	background: #212529;
+	border-radius: 10px;
+}
+#camera{
+	position: absolute;
+	width: 58px;
+	height: 42px;
+	left: 185px;
+	top: 351px;
+	
+	font-family: 'S-Core Dream';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 42px;
+	/* identical to box height, or 280% */
+	
+	
+	color: #FFFFFF;
+}
+
+/* 로딩창 설정 */
+#loding-wrapper{
+	position: absolute;
+	width: 328px;
+	height: 102px;
+	left: 48px;
+	top: 562px;
+	
+	background: #FFFFFF;
+	border-radius: 11.0561px;
+}
+#loding-img1{
+	position: absolute;
+	left: 10.41%;
+	right: 87.02%;
+	top: 58.88%;
+	bottom: 33.02%;
+	
+	background-image: url("../images/icon-loding1.png");
+    background-size: cover;
+}
+#loding-img2{
+	position: absolute;
+	left: 19.03%;
+	right: 78.38%;
+	top: 58.81%;
+	bottom: 32.94%;
+
+	background-image: url("../images/icon-loding2.png");
+    background-size: cover;
+}
+#loding-img3{
+	position: absolute;
+	left: 15.26%;
+	right: 83.24%;
+	top: 63.97%;
+	bottom: 26.39%;
+
+	background-image: url("../images/icon-loding3.png");
+    background-size: cover;
+}
+#loding-img4{
+	position: absolute;
+	left: 19.04%;
+	right: 78.44%;
+	top: 32.11%;
+	bottom: 59.79%;
+
+	background-image: url("../images/icon-loding4.png");
+    background-size: cover;
+}
+#loding-img5{
+	position: absolute;
+	left: 10.39%;
+	right: 86.98%;
+	top: 31.97%;
+	bottom: 59.79%;
+
+	background-image: url("../images/icon-loding5.png");
+    background-size: cover;
+}
+#loding-img6{
+	position: absolute;
+	left: 8.51%;
+	right: 88.49%;
+	top: 47.1%;
+	bottom: 48.08%;
+
+	background-image: url("../images/icon-loding6.png");
+    background-size: cover;
+}
+#loding-img7{
+	position: absolute;
+	left: 20.5%;
+	right: 76.5%;
+	top: 47.1%;
+	bottom: 48.08%;
+
+	background-image: url("../images/icon-loding7.png");
+    background-size: cover;
+}
+#loding-img8{
+	position: absolute;
+	left: 15.26%;
+	right: 83.24%;
+	top: 25.41%;
+	bottom: 64.95%;
+
+	background-image: url("../images/icon-loding8.png");
+    background-size: cover;
+}
+#loding-text{
+	position: absolute;
+	width: 175px;
+	height: 38px;
+	left: 124px;
+	top: 32px;
+	
+	font-family: 'S-Core Dream';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 42px;
+	/* or 262% */
+	
+	
+	color: #7048E4;
+
+}
+
+/* 경고창 설정 */
+#warning-wrapper{
+	position: absolute;
+	width: 328px;
+	height: 135px;
+	left: 50px;
+	top: 706px;
+	
+	background: #212529;
+	box-shadow: 1.38201px 1.38201px 4.14604px #F1F1F1;
+	border-radius: 11.0561px;
+}
+#warning-img{
+	position: absolute;
+	left: 10.37%;
+	right: 82.32%;
+	top: 11.11%;
+	bottom: 71.11%;
+	
+	background-image: url("../images/icon-warning.png");
+    background-size: cover;}
+#warning-title{
+	position: absolute;
+	width: 107px;
+	height: 19px;
+	left: 68px;
+	top: 18px;
+	
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 93.4%;
+	/* identical to box height, or 19px */
+	
+	text-transform: uppercase;
+	
+	color: #F4C10C;
+}
+.warning-hr{
+	position: absolute;
+	width: 269px;
+	height: 0px;
+	left: 30px;
+	top: 45px;
+	
+	border: 0.691007px solid #E8E8E8;
+}
+#warning-sub{
+	position: absolute;
+	width: 268px;
+	height: 60px;
+	left: 34px;
+	top: 57px;
+	
+	font-family: 'S-Core Dream';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 11px;
+	line-height: 20px;
+	/* or 182% */
+	
+	
+	color: #F8F9FA;
+}
+
+
+
+
+
