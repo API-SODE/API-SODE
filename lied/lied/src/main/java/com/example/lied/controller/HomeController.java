@@ -19,4 +19,7 @@ public class HomeController {
     public String goToMeasurement() {
         return "html/measurement";
     }
+
+    @RequestMapping("/result")
+    public String goToResult() {return "html/result";}
 }
