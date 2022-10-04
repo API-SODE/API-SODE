@@ -111,26 +111,13 @@ body {
 	height: 295px;
 	left: 44px;
 	top: 224px;
-	
-	background: #212529;
+
 	border-radius: 10px;
 }
-#camera{
-	position: absolute;
-	width: 58px;
-	height: 42px;
-	left: 185px;
-	top: 351px;
-	
-	font-family: 'S-Core Dream';
-	font-style: normal;
-	font-weight: 600;
-	font-size: 15px;
-	line-height: 42px;
-	/* identical to box height, or 280% */
-	
-	
-	color: #FFFFFF;
+
+#input_video{
+	width: 341px;
+	height: 295px;
 }
 
 /* 로딩창 설정 */
@@ -138,11 +125,13 @@ body {
 	position: absolute;
 	width: 328px;
 	height: 102px;
-	left: 48px;
-	top: 562px;
+	left: 50px;
+	top: 758px;
 	
 	background: #FFFFFF;
 	border-radius: 11.0561px;
+
+	display: none;
 }
 #loding-img1{
 	position: absolute;
@@ -249,7 +238,7 @@ body {
 	width: 328px;
 	height: 135px;
 	left: 50px;
-	top: 706px;
+	top: 571px;
 	
 	background: #212529;
 	box-shadow: 1.38201px 1.38201px 4.14604px #F1F1F1;
@@ -309,6 +298,25 @@ body {
 	color: #F8F9FA;
 }
 
+#start_btn{
+	cursor: pointer;
+	position: absolute;
+	width: 177px;
+	height: 72px;
+	left: 126px;
+	top: 801px;
+
+	background: #7048E4;
+	border-radius: 11.0561px;
+
+	border:none;
+	font-family: 'S-Core Dream';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 42px;
+	color: #FFFFFF;
+}
 
 
 
