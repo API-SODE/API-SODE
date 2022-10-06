@@ -62,6 +62,13 @@ Githuib: https://github.com/google/mediapipe/blob/master/docs/solutions/face_mes
 </div>
 
 <button id="start_btn" onclick="start()">시작</button>
+<!-- 해결된 뒤 주석 삭제 예정
+start()가 js/measurement.js에 있는 함수고 Click()가 js/api_script.js에 있는 함수
+measurement만 해도 API가 보내지는 거 같은데... 일단 measurement에 아이트레커가 있고.. 음.. 스마트 디아그노시스 측에서 페이지를 나눠놓은 이유가 있는지..;ㅡ;
+만약에 페이지를 두 개를 해서 하는 게 맞으면 처음에 measurement 페이지를 만들고 로딩중 페이지를 따로 둬야 될듯..? (일단 api 깃허브에는 나눠져 있음)
+api 받아 오는 거는 start()로 안되면 밑에 줄 주석 풀고 Click()으로 해서 받아오면 될 듯..
+<button id="start_btn" onclick="Click()">시작</button> -->
+
 <button onclick="end()">종료</button>
 
 <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
@@ -73,5 +80,6 @@ Githuib: https://github.com/google/mediapipe/blob/master/docs/solutions/face_mes
 
 <script async th:src="@{/js/opencv.js}"></script>
 <script th:src="@{/js/measurement.js}"></script>
+<script th:src="@{/js/api_script.js}"></script>
 </body>
 </html>
