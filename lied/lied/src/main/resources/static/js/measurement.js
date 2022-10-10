@@ -39,7 +39,7 @@ const CompanyKey = "CompanyKey";                    // 회사 인증키
 const CompanyClient = 'CompanyClient_Key';          // 회사의 회원별 고유키
 let START_IDX = 0;                                  // 첫 시작시 홍채 변수 IDX
 let LAST_IDX = 0;                                   // 마지막 홍채 변수 IDX
-let MeasureTime = 300                               // 총 측정할 시간(초)
+let MeasureTime = 45                               // 총 측정할 시간(초)
 
 window.onload = () => {
     // 카메라 초기화
@@ -89,6 +89,7 @@ function end() {
     clearInterval(timerInterval);
     console.log('측정이 종료되었습니다.');
     onResults_flag = false;
+    document.location.href = "/result"
 }
 
 async function send_OFvec() {
