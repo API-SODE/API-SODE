@@ -2,6 +2,8 @@ const select_result_last = document.getElementById('select_result_last');
 const select_result_total = document.getElementById('select_result_total');
 const select_result_more = document.getElementById('select_result_more');
 
+const result_text = document.getElementById('result-content');
+
 
 // 문의 후 키 발급 후 사용 가능, CompanyKey
 // CardiVu API 문의 : http://www.sdcor.net/contact
@@ -34,9 +36,9 @@ async function fetch_select_result_more(START_IDX, LAST_IDX) {
 
         if (response.status == 200) {
             let json = await response.json();
-            console.log(json);
+            var result = json.Data;
+            console.log(result);
             //TODO: 어떤 결과(상세, 마지막, 전체 평균) 가져올지 결정
-            select_result_more.innerText = JSON.stringify(json);
         } else {
             throw new Error(response.status);
         }
@@ -64,7 +66,14 @@ async function fetch_select_result_last() {
         if (response.status == 200) {
             let json = await response.json();
             console.log(json);
-            select_result_last.innerText = JSON.stringify(json);
+            var result = json.Data;
+            console.log(result[0].BPM);
+            console.log(result[0].CREATED_TIME);
+            console.log(result[0].CREATED_TIME);
+
+            result_text.innerText += " 최초 BPM : " + result[0].BPM;
+            result_text.innerText += "\n\n 생성 시간 : " + result[0].CREATED_TIME;
+            result_text.innerText += "\n\n 스트레스 : " + result[0].STRESS;
         } else {
             throw new Error(response.status);
         }
@@ -91,8 +100,14 @@ async function fetch_select_result_total() {
 
         if (response.status == 200) {
             let json = await response.json();
-            console.log(json);
-            select_result_total.innerText = JSON.stringify(json);
+            var arr = json.Data;
+            var sum = 0;
+            for (let i = 0; i < arr.length; i++){
+                sum += arr[i].BPM;   // 배열의 요소들을 하나씩 더한다.
+            }
+            var avg = sum / arr.length;
+
+            result_text.innerText += "\n\n 평균 BPM : " + avg;
         } else {
             throw new Error(response.status);
         }
