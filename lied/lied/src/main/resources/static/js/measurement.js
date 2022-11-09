@@ -34,9 +34,9 @@ let BPM_List = [];
 // 측정 종료시 측정된 홍채 데이터의 시작(START_IDX)~끝(LAST_IDX) ,회사(CompanyCode, CompanyKey), 측정된 사용자(CompanyClient)의 정보를 전달해야됨
 const CardiVuAPI_Domain = "https://www.cardivu.com/";
 const CardiVuAPI_Domain_Link = CardiVuAPI_Domain + "api/measure";
-const CompanyCode = "CompanyCode";                  // 회사코드
-const CompanyKey = "CompanyKey";                    // 회사 인증키
-const CompanyClient = 'CompanyClient_Key';          // 회사의 회원별 고유키
+const CompanyCode ;                  // 회사코드
+const CompanyKey ;                    // 회사 인증키
+const CompanyClient ;          // 회사의 회원별 고유키
 let START_IDX = 0;                                  // 첫 시작시 홍채 변수 IDX
 let LAST_IDX = 0;                                   // 마지막 홍채 변수 IDX
 let MeasureTime = 45                               // 총 측정할 시간(초)
@@ -89,7 +89,9 @@ function end() {
     clearInterval(timerInterval);
     console.log('측정이 종료되었습니다.');
     onResults_flag = false;
-    document.location.href = "/result"
+
+    // 결과창 이동
+    document.location.href = "/result?sidx="+START_IDX +"&lidx="+LAST_IDX;
 }
 
 async function send_OFvec() {
@@ -116,6 +118,8 @@ async function send_OFvec() {
                 if (response.status == 200) {
                     let json = await response.json();
                     console.log(json);
+                    START_IDX = json.START_IDX;
+                    LAST_IDX = json.LAST_IDX;
 
                     if (START_IDX == 0) {
                         START_IDX = json['LAST_IDX'];

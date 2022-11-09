@@ -1,8 +1,11 @@
+document.write('<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>');
+document.write('<script src = "https://code.highcharts.com/highcharts.js"></script>');
+document.write('<script src="https://d3js.org/d3.v4.min.js"></script>');
+
 const select_result_last = document.getElementById('select_result_last');
 const select_result_total = document.getElementById('select_result_total');
 const select_result_more = document.getElementById('select_result_more');
-
-const result_text = document.getElementById('result-content');
+const url = new URL(window.location.href);
 
 
 // 문의 후 키 발급 후 사용 가능, CompanyKey
@@ -12,11 +15,14 @@ const result_text = document.getElementById('result-content');
 //TODO: CompanyCode,Key,Client property에 넣고 gitignore에 추가하기
 const CardiVuAPI_Domain = "https://www.cardivu.com/";
 const CardiVuAPI_Domain_Link = CardiVuAPI_Domain + "api/select_result";
-const CompanyCode = "CompanyCode";                  // 회사코드
-const CompanyKey = "CompanyKey";                    // 회사 인증키
+const CompanyCode = ;                  // 회사코드
+const CompanyKey = ;                    // 회사 인증키
 const CompanyClient = 'CompanyClient_Key';          // 회사의 회원별 고유키
-let START_IDX = 90220;                              // 첫 시작시 홍채 변수 IDX, 임의로 90220 입력함
-let LAST_IDX = 90287;                               // 마지막 홍채 변수 IDX, 임의로 90287 입력함
+
+const urlParams = url.searchParams;
+
+let START_IDX = urlParams.get("sidx");  // 첫 시작시 홍채 변수 IDX, 임의로 90220 입력함
+let LAST_IDX = urlParams.get("lidx");   // 마지막 홍채 변수 IDX, 임의로 90287 입력함
 
 async function fetch_select_result_more(START_IDX, LAST_IDX) {
     let formData = new FormData();
@@ -35,10 +41,58 @@ async function fetch_select_result_more(START_IDX, LAST_IDX) {
         });
 
         if (response.status == 200) {
-            let json = await response.json();
-            var result = json.Data;
+            let result = await response.json();
             console.log(result);
-            //TODO: 어떤 결과(상세, 마지막, 전체 평균) 가져올지 결정
+
+            const arr = [];
+            for (let i = 0; i < result.Data.length; i++){
+                arr[i] = result.Data[i].BPM;
+            }
+
+            $(document).ready(function() {
+                let title = {
+                    text: '실시간 맥박 데이터'
+                };
+                let subtitle = {
+                    text: '심장박동수 실시간 체크'
+                };
+                let xAxis = {
+                    categories: ['1', '2', '3', '4', '5', '6',
+                        '7', '8', '9', '10', '11', '12', '13', '14', '15']
+                };
+                let yAxis = {
+                    title: {
+                        text: 'BPM'
+                    },
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                };
+
+
+                let series =  [{
+                    name: 'BPM',
+                    data: arr
+                }
+                ];
+
+                let json = {};
+                json.title = title;
+                json.subtitle = subtitle;
+                json.xAxis = xAxis;
+                json.yAxis = yAxis;
+                json.series = series;
+
+                $('#container').highcharts(json);
+
+                // 표준 편차 구하기
+                var deviation = d3.deviation(arr); //표준편차
+                document.getElementById('deviation').innerText += deviation
+                console.log("표준 편차 " + deviation)
+            });
+
         } else {
             throw new Error(response.status);
         }
@@ -46,6 +100,8 @@ async function fetch_select_result_more(START_IDX, LAST_IDX) {
         console.log('fetch_select_result_more : ' + e);
     }
 }
+
+
 
 async function fetch_select_result_last() {
     let formData = new FormData();
@@ -66,14 +122,8 @@ async function fetch_select_result_last() {
         if (response.status == 200) {
             let json = await response.json();
             console.log(json);
-            var result = json.Data;
-            console.log(result[0].BPM);
-            console.log(result[0].CREATED_TIME);
-            console.log(result[0].CREATED_TIME);
-
-            result_text.innerText += " 최초 BPM : " + result[0].BPM;
-            result_text.innerText += "\n\n 생성 시간 : " + result[0].CREATED_TIME;
-            result_text.innerText += "\n\n 스트레스 : " + result[0].STRESS;
+            START_IDX = json.Data[0].STARTIDX;
+            LAST_IDX = json.Data[0].LASTIDX;
         } else {
             throw new Error(response.status);
         }
@@ -100,14 +150,7 @@ async function fetch_select_result_total() {
 
         if (response.status == 200) {
             let json = await response.json();
-            var arr = json.Data;
-            var sum = 0;
-            for (let i = 0; i < arr.length; i++){
-                sum += arr[i].BPM;   // 배열의 요소들을 하나씩 더한다.
-            }
-            var avg = sum / arr.length;
-
-            result_text.innerText += "\n\n 평균 BPM : " + avg;
+            console.log(json);
         } else {
             throw new Error(response.status);
         }
@@ -116,8 +159,7 @@ async function fetch_select_result_total() {
     }
 }
 
-fetch_select_result_more(START_IDX, LAST_IDX);     // 상세 결과 가져오기
-
 fetch_select_result_last();     // 마지막 결과 가져오기
-
+fetch_select_result_more(START_IDX, LAST_IDX);     // 상세 결과 가져오기
 fetch_select_result_total();    // 전체 평균 결과 가져오기
+

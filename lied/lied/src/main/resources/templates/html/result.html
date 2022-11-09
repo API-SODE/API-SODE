@@ -22,26 +22,17 @@
 
 <div id="result-wrapper">
     <div id="result-title">상세 결과</div>
-    <div id="result-pulse-title">맥박</div>
-    <div id="result-bpm-title">bpm</div>
-    <div id="result-pulse"></div>
-    <div id="result-bpm"></div>
-    <div id="result-content">
-<!--        이상맥박을 탐지하는 방법은 다음과 같다.</br></br>맥박을 30번을 측정하고 처음10번의 맥박의 기록은 초기 측정 시 부정확한 값이 추출되므로 버린다. 나머지-->
-<!--        맥박측정 결과를 모두 더하고 측정수로 나누어서 평균 심박 수를 구한다.</br></br>탐지하는 이상심박의 범위는 평균 심박 수에 +10, -10의 기준범위를 설정하여 이상심박을 탐지하였다.-->
+    <div id = "container" style = "width: 300px; height: 350px; margin: auto; margin-top: 60px;"></div>
+    <div id="deviation"> BPM 표준 편차 : </div>
+    <div id = "result-text">
+        이상맥박을 탐지하는 방법은 다음과 같습니다. </br>
+
+        탐지된 이상 심박의 범위는 평균 심박 수에 </br>
+        +10, -10의 기준범위를 설정하여 이상심박을 </br>
+        탐지하였습니다. </br>
     </div>
 </div>
 <hr>
-마지막 결과 가져오기
-<div id="select_result_last" value="마지막 결과 가져오기"></div>
-<hr>
-상세 결과 가져오기
-<div id="select_result_more" value="상세 결과 가져오기"></div>
-<hr>
-전체 평균 결과 가져오기
-<div id="select_result_total" value="전체 평균 결과 가져오기"></div>
-<hr>
-
 <script th:src="@{/js/api_result.js}"></script>
 </body>
 </html>

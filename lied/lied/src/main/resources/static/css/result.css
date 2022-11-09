@@ -107,15 +107,41 @@ body {
 /*결과 설정*/
 #result-wrapper{
     position: absolute;
-    width: 324px;
-    height: 612px;
-    left: 58px;
-    top: 279px;
+    width: 350px;
+    height: 1000px;
+    left: 34px;
+    top: 209px;
 
     background: #FFFFFF;
     border-radius: 11.0561px;
 }
 
+#deviation{
+    position: absolute;
+    width: 350px;
+    height: 20px;
+    left: 34px;
+    top: 450px;
+
+    font-family: 'S-Core Dream';
+    color: #212529;
+}
+#result-text{
+    position: absolute;
+    width: 350px;
+    left: 34px;
+    top: 500px;
+
+    font-family: 'S-Core Dream';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 20px;
+    /* or 154% */
+
+
+    color: #212529;
+}
 
 #result-title{
     position: absolute;
@@ -125,11 +151,11 @@ body {
     top: 10px;
 
     font-family: 'S-Core Dream';
-    font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 42px;
     /* identical to box height, or 175% */
+    color: #6741d9;
 }
 
 #result-pulse-title{
