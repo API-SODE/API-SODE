@@ -125,6 +125,7 @@ body{
     height: 98px;
     left: 68px;
     top: 270px;
+    cursor: pointer;    
 
     background: #FFFFFF;
     border-radius: 10px;

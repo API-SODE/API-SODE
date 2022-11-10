@@ -17,6 +17,7 @@ Githuib: https://github.com/google/mediapipe/blob/master/docs/solutions/face_mes
     <link rel="stylesheet" type="text/css" th:href="@{/css/measurement.css}">
     <meta charset="UTF-8">
     <title>LieD</title>
+
 </head>
 <body>
 <div id="header-wrapper">
@@ -27,7 +28,18 @@ Githuib: https://github.com/google/mediapipe/blob/master/docs/solutions/face_mes
 <div id="question-wrapper">
     <div id="question-img"></div>
     <div id="question-title">질문</div>
-    <div id="question-sub">선택된 질문</div>
+    <div id="question-sub">  
+	    <script language = "javascript">
+	   	  if(location.href == 'http://localhost:8080/measurement'){
+	   		document.write('질문을 해주세요!');
+	   	  } 
+	   	  else{
+		  	temp = location.href.split("?");
+		 	q=temp[1].split();
+		 	document.write(decodeURI(q));		 
+	   	  }
+		</script>
+	</div>
 </div>
 
 <div id="camera-wrapper">
