@@ -8,9 +8,9 @@ const loading = document.getElementById('loding-wrapper');
 const midCtx = mid_canvas.getContext('2d');
 const canvasCtx = output_canvas.getContext('2d');
 
-const width = 1280;
-const height = 720;
-const left_eye = ['33', '133'];
+const width = 341;//1280;
+const height = 295;//720;
+const left_eye = ['33', '133']; //33,133
 const eyeW = 200;
 const irisW = 91;
 
@@ -36,7 +36,7 @@ const CardiVuAPI_Domain = "https://www.cardivu.com/";
 const CardiVuAPI_Domain_Link = CardiVuAPI_Domain + "api/measure";
 const CompanyCode ;                  // 회사코드
 const CompanyKey ;                    // 회사 인증키
-const CompanyClient ;          // 회사의 회원별 고유키
+const CompanyClient  ;          // 회사의 회원별 고유키
 let START_IDX = 0;                                  // 첫 시작시 홍채 변수 IDX
 let LAST_IDX = 0;                                   // 마지막 홍채 변수 IDX
 let MeasureTime = 45                               // 총 측정할 시간(초)
@@ -578,40 +578,40 @@ function draw_eyeTracker(pts, color) {
     canvasCtx.lineWidth = 1;
     canvasCtx.lineDashOffset = 0;
     canvasCtx.beginPath();
-    canvasCtx.moveTo(x - 120, y);
-    canvasCtx.lineTo(x - 70, y);
-    canvasCtx.moveTo(x - 10, y);
-    canvasCtx.lineTo(x + 10, y);
-    canvasCtx.moveTo(x + 70, y);
-    canvasCtx.lineTo(x + 120, y);
-    canvasCtx.moveTo(x, y - 120);
-    canvasCtx.lineTo(x, y - 70);
-    canvasCtx.moveTo(x, y - 10);
-    canvasCtx.lineTo(x, y + 10);
-    canvasCtx.moveTo(x, y + 70);
-    canvasCtx.lineTo(x, y + 120);
+    canvasCtx.moveTo(x - 60, y);
+    canvasCtx.lineTo(x - 35, y);
+    canvasCtx.moveTo(x - 5, y);
+    canvasCtx.lineTo(x + 5, y);
+    canvasCtx.moveTo(x + 35, y);
+    canvasCtx.lineTo(x + 60, y);
+    canvasCtx.moveTo(x, y - 60);
+    canvasCtx.lineTo(x, y - 35);
+    canvasCtx.moveTo(x, y - 5);
+    canvasCtx.lineTo(x, y + 5);
+    canvasCtx.moveTo(x, y + 35);
+    canvasCtx.lineTo(x, y + 60);
     canvasCtx.stroke();
 
     canvasCtx.lineWidth = 1;
     canvasCtx.setLineDash([1, 0]);
     canvasCtx.beginPath();
-    canvasCtx.arc(x, y, 50, 0, Math.PI / 180 * 360, false);
+    canvasCtx.arc(x, y, 25, 0, Math.PI / 180 * 360, false);
     canvasCtx.stroke();
     canvasCtx.closePath();
 
-    canvasCtx.lineWidth = 10;
-    canvasCtx.setLineDash([1, 16]);
+    canvasCtx.lineWidth = 5;
+    canvasCtx.setLineDash([1, 8]);
     canvasCtx.beginPath();
-    canvasCtx.arc(x, y, 40, 0, Math.PI / 180 * 360, false);
+    canvasCtx.arc(x, y, 20, 0, Math.PI / 180 * 360, false);
     canvasCtx.stroke();
     canvasCtx.closePath();
 
     canvasCtx.strokeStyle = color;
-    canvasCtx.lineWidth = 10;
-    canvasCtx.setLineDash([80, 50]);
+    canvasCtx.lineWidth = 5;
+    canvasCtx.setLineDash([40, 25]);
     canvasCtx.lineDashOffset = track_num;
     canvasCtx.beginPath();
-    canvasCtx.arc(x, y, 60, 0, Math.PI / 180 * 360, false);
+    canvasCtx.arc(x, y, 30, 0, Math.PI / 180 * 360, false);
     canvasCtx.stroke();
     canvasCtx.closePath();
 
@@ -658,7 +658,7 @@ function onResults(results) {
                 for (const landmarks of results.multiFaceLandmarks) {
                     const eye_idx = left_eye;
                     const target_pts = find_eye(landmarks, eye_idx);
-                    const eye_d = ((landmarks['263'].x - landmarks['33'].x) ** 2 + (landmarks['263'].y - landmarks['33'].y) ** 2) ** (1 / 2);
+                    const eye_d = ((landmarks['263'].x - landmarks['33'].x) ** 2 + (landmarks['263'].y - landmarks['33'].y) ** 2) ** (1 / 2);//263, 33
                     const yaw_del = ((landmarks['263'].z - landmarks['33'].z) * (output_canvas.width / 2)) ** 2;
                     const roll_del = (landmarks['263'].x - landmarks['33'].x) * 10
 
