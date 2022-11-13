@@ -1,7 +1,7 @@
 body{
     position: relative;
     width: 428px;
-    height: 926px;
+    height: 1700px;
 
     background: linear-gradient(182.48deg, #865EFF 26.32%, #FBFBFB 169.92%);
     border-radius: 50px;
@@ -180,4 +180,136 @@ body{
 
     background-image: url("../images/icon-arrow-right.png");
     background-size: cover;
+}
+
+#list2-wrapper{
+    position: absolute;
+    width: 292px;
+    height: 98px;
+    left: 68px;
+    top: 380px;
+    cursor: pointer;    
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+#list3-wrapper{
+    position: absolute;
+    width: 292px;
+    height: 98px;
+    left: 68px;
+    top: 490px;
+    cursor: pointer;    
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+#list4-wrapper{
+    position: absolute;
+    width: 292px;
+    height: 98px;
+    left: 68px;
+    top: 600px;
+    cursor: pointer;    
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+#list5-wrapper{
+    position: absolute;
+    width: 292px;
+    height: 98px;
+    left: 68px;
+    top: 710px;
+    cursor: pointer;    
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+#list6-wrapper{
+    position: absolute;
+    width: 292px;
+    height: 98px;
+    left: 68px;
+    top: 820px;
+    cursor: pointer;    
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+#list7-wrapper{
+    position: absolute;
+    width: 292px;
+    height: 98px;
+    left: 68px;
+    top: 930px;
+    cursor: pointer;    
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+#list8-wrapper{
+    position: absolute;
+    width: 292px;
+    height: 98px;
+    left: 68px;
+    top: 1040px;
+    cursor: pointer;    
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+#list9-wrapper{
+    position: absolute;
+    width: 292px;
+    height: 98px;
+    left: 68px;
+    top: 1150px;
+    cursor: pointer;    
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+#list10-wrapper{
+    position: absolute;
+    width: 292px;
+    height: 98px;
+    left: 68px;
+    top: 1260px;
+    cursor: pointer;    
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+#list11-wrapper{
+    position: absolute;
+    width: 292px;
+    height: 98px;
+    left: 68px;
+    top: 1370px;
+    cursor: pointer;    
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+#list12-wrapper{
+    position: absolute;
+    width: 292px;
+    height: 98px;
+    left: 68px;
+    top: 1480px;
+    cursor: pointer;    
+
+    background: #FFFFFF;
+    border-radius: 10px;
 }
