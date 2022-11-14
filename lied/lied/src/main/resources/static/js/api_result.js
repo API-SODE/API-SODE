@@ -15,8 +15,8 @@ const url = new URL(window.location.href);
 //TODO: CompanyCode,Key,Client property에 넣고 gitignore에 추가하기
 const CardiVuAPI_Domain = "https://www.cardivu.com/";
 const CardiVuAPI_Domain_Link = CardiVuAPI_Domain + "api/select_result";
-const CompanyCode = ;                  // 회사코드
-const CompanyKey = ;                    // 회사 인증키
+const CompanyCode = "";                  // 회사코드
+const CompanyKey = "";                 // 회사 인증키
 const CompanyClient = 'CompanyClient_Key';          // 회사의 회원별 고유키
 
 const urlParams = url.searchParams;
@@ -88,9 +88,16 @@ async function fetch_select_result_more(START_IDX, LAST_IDX) {
                 $('#container').highcharts(json);
 
                 // 표준 편차 구하기
-                var deviation = d3.deviation(arr); //표준편차
-                document.getElementById('deviation').innerText += deviation
+                var deviation = d3.deviation(arr).toFixed(2); //표준편차
+                document.getElementById('deviation').innerText +=  " " + deviation
                 console.log("표준 편차 " + deviation)
+
+                if(deviation >= 2.5){
+                    document.getElementById('noti-sub').innerHTML = "당신은 '라이어'입니다";
+                }
+                else{
+                    document.getElementById('noti-sub').innerHTML = "당신은 '라이어'가 아닙니다";
+                }
             });
 
         } else {
