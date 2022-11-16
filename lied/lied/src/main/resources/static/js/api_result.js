@@ -15,8 +15,8 @@ const url = new URL(window.location.href);
 //TODO: CompanyCode,Key,Client property에 넣고 gitignore에 추가하기
 const CardiVuAPI_Domain = "https://www.cardivu.com/";
 const CardiVuAPI_Domain_Link = CardiVuAPI_Domain + "api/select_result";
-const CompanyCode = "";                  // 회사코드
-const CompanyKey = "";                 // 회사 인증키
+const CompanyCode = "";
+const CompanyKey = "f";                   // 회사 인증키
 const CompanyClient = 'CompanyClient_Key';          // 회사의 회원별 고유키
 
 const urlParams = url.searchParams;
